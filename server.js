@@ -8,9 +8,37 @@ const multer     = require('multer');
 const cloudinary = require('cloudinary').v2;
 const cors       = require('cors');
 const path       = require('path');
+const crypto     = require('crypto');
 
 const app  = express();
 const PORT = process.env.PORT || 3000;
+
+// ─── ADMIN PASSWORD (set ADMIN_PASSWORD as env var on Render — never hardcode) ───
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'rashi2025';
+
+// Simple in-memory token store  { token: expiresAt }
+const validTokens = new Map();
+const TOKEN_TTL   = 8 * 60 * 60 * 1000; // 8 hours
+
+function generateToken() {
+  return crypto.randomBytes(32).toString('hex');
+}
+
+function isValidToken(token) {
+  if (!token || !validTokens.has(token)) return false;
+  if (Date.now() > validTokens.get(token)) {
+    validTokens.delete(token);
+    return false;
+  }
+  return true;
+}
+
+// Middleware: protect all /api/images write routes
+function requireAdmin(req, res, next) {
+  const token = req.headers['x-admin-token'];
+  if (!isValidToken(token)) return res.status(401).json({ error: 'Unauthorised' });
+  next();
+}
 
 // ─── CLOUDINARY CONFIG (set these as env vars on Render) ───
 cloudinary.config({
@@ -22,7 +50,7 @@ cloudinary.config({
 // ─── MIDDLEWARE ───
 app.use(cors());
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Multer: accept images up to 10MB, store in memory
 const upload = multer({
@@ -40,9 +68,34 @@ function folderFromKey(key) {
   return 'rashi/' + key.replace(':', '/');
 }
 
-// ─── ROUTES ───
+// ─── ADMIN AUTH ROUTES ───
 
-// GET /api/images/:key  — list all images in a gallery
+// POST /api/admin/login  — verify password, return token
+app.post('/api/admin/login', (req, res) => {
+  const { password } = req.body;
+  if (password === ADMIN_PASSWORD) {
+    const token = generateToken();
+    validTokens.set(token, Date.now() + TOKEN_TTL);
+    return res.json({ token });
+  }
+  setTimeout(() => res.status(401).json({ error: 'Incorrect password' }), 500);
+});
+
+// POST /api/admin/logout
+app.post('/api/admin/logout', (req, res) => {
+  const token = req.headers['x-admin-token'];
+  if (token) validTokens.delete(token);
+  res.json({ ok: true });
+});
+
+// GET /api/admin/verify
+app.get('/api/admin/verify', (req, res) => {
+  res.json({ valid: isValidToken(req.headers['x-admin-token']) });
+});
+
+// ─── IMAGE ROUTES ───
+
+// GET /api/images/:key  — list all images (public, no auth needed)
 app.get('/api/images/:key(*)', async (req, res) => {
   try {
     const folder = folderFromKey(req.params.key);
@@ -78,8 +131,8 @@ app.get('/api/images/:key(*)', async (req, res) => {
   }
 });
 
-// POST /api/images/:key  — upload one or more images
-app.post('/api/images/:key(*)', upload.array('images'), async (req, res) => {
+// POST /api/images/:key  — upload one or more images (admin only)
+app.post('/api/images/:key(*)', requireAdmin, upload.array('images'), async (req, res) => {
   try {
     const folder  = folderFromKey(req.params.key);
     const labels  = JSON.parse(req.body.labels || '[]');   // array of label strings
@@ -117,8 +170,8 @@ app.post('/api/images/:key(*)', upload.array('images'), async (req, res) => {
   }
 });
 
-// PATCH /api/images/:key/label  — update a label
-app.patch('/api/images/:key(*)/label', async (req, res) => {
+// PATCH /api/images/:key/label  — update a label (admin only)
+app.patch('/api/images/:key(*)/label', requireAdmin, async (req, res) => {
   try {
     const { public_id, label } = req.body;
     await cloudinary.uploader.update_metadata(`caption=${label}|label=${label}`, [public_id]);
@@ -129,8 +182,8 @@ app.patch('/api/images/:key(*)/label', async (req, res) => {
   }
 });
 
-// PATCH /api/images/:key/cover  — set cover image
-app.patch('/api/images/:key(*)/cover', async (req, res) => {
+// PATCH /api/images/:key/cover  — set cover image (admin only)
+app.patch('/api/images/:key(*)/cover', requireAdmin, async (req, res) => {
   try {
     const { public_id, folder_key } = req.body;
     const folder = folderFromKey(folder_key);
@@ -158,8 +211,8 @@ app.patch('/api/images/:key(*)/cover', async (req, res) => {
   }
 });
 
-// DELETE /api/images/:public_id(*)  — delete one image
-app.delete('/api/images/:public_id(*)', async (req, res) => {
+// DELETE /api/images/:public_id(*)  — delete one image (admin only)
+app.delete('/api/images/:public_id(*)', requireAdmin, async (req, res) => {
   try {
     await cloudinary.uploader.destroy(req.params.public_id);
     res.json({ ok: true });
@@ -171,7 +224,7 @@ app.delete('/api/images/:public_id(*)', async (req, res) => {
 
 // ─── SERVE FRONTEND ───
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // ─── START ───
