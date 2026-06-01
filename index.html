@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rashi Art Classes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">Rashi <span>Art Classes</span></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-texture"></div>
+    <div class="hero-shape"></div>
+    <div class="hero-shape"></div>
+    <div class="hero-shape"></div>
+    <div class="brush-line">
+      <svg viewBox="0 0 500 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="g1" cx="50%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="#c4632a" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#c4632a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <path d="M100,50 Q400,200 200,450 Q0,700 350,900" stroke="rgba(212,168,75,0.15)" stroke-width="120" fill="none" stroke-linecap="round"/>
+        <path d="M300,0 Q100,300 400,600 Q500,750 200,900" stroke="rgba(196,99,42,0.12)" stroke-width="80" fill="none" stroke-linecap="round"/>
+        <circle cx="380" cy="150" r="80" fill="url(#g1)"/>
+        <circle cx="150" cy="600" r="60" fill="rgba(122,140,110,0.2)"/>
+        <g transform="translate(250,300) rotate(-15)">
+          <ellipse cx="0" cy="0" rx="90" ry="70" fill="rgba(247,242,232,0.07)" stroke="rgba(212,168,75,0.3)" stroke-width="2"/>
+          <circle cx="30" cy="-30" r="14" fill="rgba(196,99,42,0.5)"/>
+          <circle cx="-35" cy="-20" r="12" fill="rgba(122,140,110,0.5)"/>
+          <circle cx="-45" cy="20" r="10" fill="rgba(212,168,75,0.5)"/>
+          <circle cx="20" cy="35" r="13" fill="rgba(139,58,26,0.5)"/>
+          <circle cx="55" cy="10" r="11" fill="rgba(181,168,150,0.5)"/>
+        </g>
+        <path d="M320,500 Q340,480 380,520 Q420,560 400,590" stroke="rgba(196,99,42,0.4)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">✦ &nbsp;Where creativity meets craft</p>
+      <h1 class="hero-title">Art is not what<br>you see, but what<br>you <em>make others</em> see.</h1>
+      <p class="hero-sub">Join our vibrant studio — open to all skill levels. Classes, courses and more. Express yourself freely.</p>
+      <a href="#medium" class="hero-cta">Explore Classes ↓</a>
+    </div>
+  </div>
+
+  <!-- ═══ CHOOSE MEDIUM ═══ -->
+  <div class="medium-section" id="medium">
+    <div class="section-header">
+      <p class="section-eyebrow">✦ &nbsp;What we offer</p>
+      <h2 class="section-title">Choose your <em>path</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="main-cards-row">
+
+      <!-- CLASSES CARD -->
+      <div class="main-card" id="card-classes" onclick="toggleMain('classes')">
+        <div class="main-card-art">
+          <svg viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="cl1" cx="40%" cy="35%"><stop offset="0%" stop-color="#f7e8d0"/><stop offset="100%" stop-color="#e8d0b0"/></radialGradient>
+              <radialGradient id="cl2" cx="60%" cy="65%"><stop offset="0%" stop-color="#c4e0f0"/><stop offset="100%" stop-color="#a0c8e0"/></radialGradient>
+            </defs>
+            <!-- Canvas background wash -->
+            <rect width="340" height="260" fill="#fdf6ec" rx="4"/>
+            <!-- Paint splashes -->
+            <ellipse cx="60" cy="50" rx="45" ry="35" fill="#f9a03f" opacity="0.25" transform="rotate(-15 60 50)"/>
+            <ellipse cx="280" cy="200" rx="55" ry="40" fill="#7ec8e3" opacity="0.22" transform="rotate(10 280 200)"/>
+            <ellipse cx="200" cy="40" rx="35" ry="28" fill="#c4632a" opacity="0.18" transform="rotate(20 200 40)"/>
+            <ellipse cx="50" cy="200" rx="40" ry="30" fill="#9bc5a0" opacity="0.2"/>
+            <!-- Easel legs -->
+            <line x1="130" y1="210" x2="100" y2="255" stroke="#8b6b4a" stroke-width="3" stroke-linecap="round"/>
+            <line x1="210" y1="210" x2="240" y2="255" stroke="#8b6b4a" stroke-width="3" stroke-linecap="round"/>
+            <line x1="170" y1="215" x2="170" y2="258" stroke="#8b6b4a" stroke-width="3" stroke-linecap="round"/>
+            <!-- Easel cross bar -->
+            <rect x="95" y="200" width="150" height="6" rx="3" fill="#7a5c3a"/>
+            <!-- Canvas on easel -->
+            <rect x="108" y="70" width="124" height="138" rx="4" fill="white" stroke="#d4b896" stroke-width="2"/>
+            <!-- Painting on canvas -->
+            <ellipse cx="170" cy="120" rx="38" ry="32" fill="url(#cl2)" opacity="0.7"/>
+            <ellipse cx="155" cy="138" rx="28" ry="22" fill="url(#cl1)" opacity="0.6"/>
+            <path d="M130,160 Q145,150 160,158 Q175,166 190,155 Q205,144 220,155" stroke="#c4632a" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <rect x="112" y="74" width="120" height="12" rx="2" fill="#f9f4ec"/>
+            <!-- Palette -->
+            <ellipse cx="82" cy="155" rx="22" ry="17" fill="#e8d5b8" stroke="#c4a882" stroke-width="1.5" transform="rotate(-15 82 155)"/>
+            <circle cx="76" cy="150" r="5" fill="#c4632a" opacity="0.8"/>
+            <circle cx="88" cy="148" r="4" fill="#7ec8e3" opacity="0.8"/>
+            <circle cx="82" cy="160" r="5" fill="#9bc5a0" opacity="0.8"/>
+            <circle cx="71" cy="160" r="4" fill="#f9a03f" opacity="0.8"/>
+            <!-- Brushes -->
+            <line x1="258" y1="90" x2="245" y2="185" stroke="#5a4a3a" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="246" cy="182" rx="5" ry="10" fill="#c4632a" transform="rotate(-5 246 182)"/>
+            <line x1="272" y1="85" x2="262" y2="180" stroke="#5a4a3a" stroke-width="3.5" stroke-linecap="round"/>
+            <ellipse cx="263" cy="177" rx="4" ry="9" fill="#7ec8e3" transform="rotate(3 263 177)"/>
+            <!-- Pencil -->
+            <line x1="44" y1="88" x2="60" y2="178" stroke="#5a4a3a" stroke-width="4" stroke-linecap="round"/>
+            <polygon points="60,178 55,188 65,185" fill="#f9a03f"/>
+            <rect x="41" y="85" width="8" height="12" rx="1" fill="#e8a070" transform="rotate(-10 41 85)"/>
+          </svg>
+        </div>
+        <div class="main-card-body">
+          <div class="main-card-tag">🎨 Hands-on Learning</div>
+          <h3 class="main-card-title">Classes</h3>
+          <p class="main-card-desc">Drawing, Painting, Watercolor, Sketching, Coloring & Canvas Art — explore your creativity in our guided studio sessions.</p>
+          <div class="main-card-cta">
+            <span>View Categories</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="arrow-icon"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
+          </div>
+        </div>
+        <div class="main-card-accent classes-accent"></div>
+      </div>
+
+      <!-- COURSES CARD -->
+      <div class="main-card" id="card-courses" onclick="toggleMain('courses')">
+        <div class="main-card-art">
+          <svg viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="co1" cx="50%" cy="50%"><stop offset="0%" stop-color="#d4a84b" stop-opacity="0.4"/><stop offset="100%" stop-color="#d4a84b" stop-opacity="0"/></radialGradient>
+            </defs>
+            <!-- Background -->
+            <rect width="340" height="260" fill="#fdf6ec" rx="4"/>
+            <!-- Abstract decorative wash -->
+            <ellipse cx="80" cy="80" rx="60" ry="45" fill="#e8a0b4" opacity="0.18" transform="rotate(20 80 80)"/>
+            <ellipse cx="270" cy="170" rx="55" ry="42" fill="#c4632a" opacity="0.15" transform="rotate(-10 270 170)"/>
+            <ellipse cx="170" cy="230" rx="80" ry="25" fill="#d4a84b" opacity="0.12"/>
+            <!-- Mandala center -->
+            <g transform="translate(170,118)">
+              <circle r="8" fill="#d4a84b" opacity="0.9"/>
+              <circle r="22" fill="none" stroke="#d4a84b" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7"/>
+              <circle r="38" fill="none" stroke="#c4632a" stroke-width="1.5" opacity="0.5"/>
+              <circle r="55" fill="none" stroke="#d4a84b" stroke-width="1" stroke-dasharray="6 4" opacity="0.4"/>
+              <circle r="70" fill="none" stroke="#7a8c6e" stroke-width="1.2" opacity="0.35"/>
+              <!-- petals -->
+              <ellipse cx="0" cy="-38" rx="7" ry="16" fill="#c4632a" opacity="0.55"/>
+              <ellipse cx="0" cy="-38" rx="7" ry="16" fill="#c4632a" opacity="0.55" transform="rotate(45)"/>
+              <ellipse cx="0" cy="-38" rx="7" ry="16" fill="#c4632a" opacity="0.55" transform="rotate(90)"/>
+              <ellipse cx="0" cy="-38" rx="7" ry="16" fill="#c4632a" opacity="0.55" transform="rotate(135)"/>
+              <ellipse cx="0" cy="-38" rx="7" ry="16" fill="#c4632a" opacity="0.55" transform="rotate(180)"/>
+              <ellipse cx="0" cy="-38" rx="7" ry="16" fill="#c4632a" opacity="0.55" transform="rotate(225)"/>
+              <ellipse cx="0" cy="-38" rx="7" ry="16" fill="#c4632a" opacity="0.55" transform="rotate(270)"/>
+              <ellipse cx="0" cy="-38" rx="7" ry="16" fill="#c4632a" opacity="0.55" transform="rotate(315)"/>
+              <!-- outer petals -->
+              <ellipse cx="0" cy="-55" rx="5" ry="12" fill="#d4a84b" opacity="0.45"/>
+              <ellipse cx="0" cy="-55" rx="5" ry="12" fill="#d4a84b" opacity="0.45" transform="rotate(60)"/>
+              <ellipse cx="0" cy="-55" rx="5" ry="12" fill="#d4a84b" opacity="0.45" transform="rotate(120)"/>
+              <ellipse cx="0" cy="-55" rx="5" ry="12" fill="#d4a84b" opacity="0.45" transform="rotate(180)"/>
+              <ellipse cx="0" cy="-55" rx="5" ry="12" fill="#d4a84b" opacity="0.45" transform="rotate(240)"/>
+              <ellipse cx="0" cy="-55" rx="5" ry="12" fill="#d4a84b" opacity="0.45" transform="rotate(300)"/>
+            </g>
+            <!-- Calligraphy pen nib -->
+            <g transform="translate(52,160) rotate(-35)">
+              <rect x="-4" y="-45" width="8" height="55" rx="2" fill="#3d2a12"/>
+              <polygon points="0,12 -6,0 6,0" fill="#c4a882"/>
+              <line x1="-3" y1="0" x2="3" y2="0" stroke="#1a1208" stroke-width="0.8"/>
+            </g>
+            <!-- Rangoli dots pattern -->
+            <circle cx="295" cy="55" r="4" fill="#c4632a" opacity="0.6"/>
+            <circle cx="310" cy="55" r="3" fill="#d4a84b" opacity="0.5"/>
+            <circle cx="280" cy="55" r="3" fill="#9bc5a0" opacity="0.5"/>
+            <circle cx="295" cy="40" r="3" fill="#e8a0b4" opacity="0.5"/>
+            <circle cx="295" cy="70" r="3" fill="#7ec8e3" opacity="0.5"/>
+            <circle cx="310" cy="40" r="2.5" fill="#d4a84b" opacity="0.4"/>
+            <circle cx="280" cy="70" r="2.5" fill="#c4632a" opacity="0.4"/>
+            <!-- Pencil shading lines -->
+            <g opacity="0.3" transform="translate(28,40)">
+              <line x1="0" y1="0" x2="30" y2="0" stroke="#5a4a3a" stroke-width="1"/>
+              <line x1="2" y1="5" x2="28" y2="5" stroke="#5a4a3a" stroke-width="1"/>
+              <line x1="4" y1="10" x2="26" y2="10" stroke="#5a4a3a" stroke-width="1"/>
+              <line x1="6" y1="15" x2="24" y2="15" stroke="#5a4a3a" stroke-width="1"/>
+              <line x1="8" y1="20" x2="22" y2="20" stroke="#5a4a3a" stroke-width="1"/>
+              <line x1="10" y1="25" x2="20" y2="25" stroke="#5a4a3a" stroke-width="1"/>
+            </g>
+          </svg>
+        </div>
+        <div class="main-card-body">
+          <div class="main-card-tag">📜 Structured Learning</div>
+          <h3 class="main-card-title">Courses</h3>
+          <p class="main-card-desc">Calligraphy, Rangoli, Handwriting, Mandala Art, Craft Art & Pencil Shading — structured programs for deeper artistic mastery.</p>
+          <div class="main-card-cta">
+            <span>View Categories</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="arrow-icon"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
+          </div>
+        </div>
+        <div class="main-card-accent courses-accent"></div>
+      </div>
+
+    </div><!-- /main-cards-row -->
+
+    <!-- ═══ CLASSES SUB-CATEGORIES ═══ -->
+    <div class="sub-panel" id="panel-classes">
+      <div class="sub-panel-header">
+        <span class="sub-panel-eyebrow">🎨 Classes</span>
+        <h3 class="sub-panel-title">Pick a <em>category</em></h3>
+        <button class="sub-panel-close" onclick="toggleMain('classes')">✕ Close</button>
+      </div>
+      <div class="sub-scroll-wrap">
+        <div class="sub-scroll" id="scroll-classes">
+
+          <div class="sub-card" onclick="openImageGallery('classes','drawing')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="160" fill="#f5f0e8" rx="8"/>
+                <line x1="20" y1="80" x2="160" y2="80" stroke="#e0d8cc" stroke-width="0.8"/>
+                <line x1="20" y1="55" x2="160" y2="55" stroke="#e0d8cc" stroke-width="0.8"/>
+                <line x1="20" y1="105" x2="160" y2="105" stroke="#e0d8cc" stroke-width="0.8"/>
+                <!-- Face sketch -->
+                <ellipse cx="90" cy="78" rx="44" ry="52" fill="none" stroke="#3d2a12" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M72,68 Q79,61 86,68" fill="none" stroke="#3d2a12" stroke-width="1.8"/>
+                <path d="M94,68 Q101,61 108,68" fill="none" stroke="#3d2a12" stroke-width="1.8"/>
+                <path d="M80,90 Q90,100 100,90" fill="none" stroke="#3d2a12" stroke-width="1.8"/>
+                <ellipse cx="90" cy="80" rx="4" ry="5" fill="none" stroke="#3d2a12" stroke-width="1.2"/>
+                <!-- Pencil -->
+                <line x1="148" y1="22" x2="130" y2="148" stroke="#5a4a3a" stroke-width="4" stroke-linecap="round"/>
+                <polygon points="130,148 126,158 136,153" fill="#f9a03f"/>
+                <rect x="145" y="18" width="8" height="10" rx="1" fill="#e8c0a0" transform="rotate(-8 145 18)"/>
+              </svg>
+            </div>
+            <div class="sub-card-label">Drawing</div>
+          </div>
+
+          <div class="sub-card" onclick="openImageGallery('classes','painting')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="pg1" cx="40%" cy="40%"><stop offset="0%" stop-color="#ffb347"/><stop offset="100%" stop-color="#c4632a"/></radialGradient>
+                  <radialGradient id="pg2" cx="60%" cy="60%"><stop offset="0%" stop-color="#7ec8e3"/><stop offset="100%" stop-color="#4a9aba"/></radialGradient>
+                </defs>
+                <rect width="180" height="160" fill="#fdf6ec" rx="8"/>
+                <ellipse cx="70" cy="75" rx="48" ry="40" fill="url(#pg1)" opacity="0.6"/>
+                <ellipse cx="110" cy="95" rx="44" ry="36" fill="url(#pg2)" opacity="0.5"/>
+                <ellipse cx="55" cy="110" rx="32" ry="24" fill="#9bc5a0" opacity="0.45"/>
+                <!-- Palette -->
+                <ellipse cx="138" cy="38" rx="20" ry="15" fill="#e8d5b8" stroke="#c4a882" stroke-width="1.2" transform="rotate(-15 138 38)"/>
+                <circle cx="132" cy="33" r="4" fill="#c4632a" opacity="0.9"/>
+                <circle cx="142" cy="32" r="3.5" fill="#7ec8e3" opacity="0.9"/>
+                <circle cx="138" cy="42" r="4" fill="#9bc5a0" opacity="0.9"/>
+                <circle cx="130" cy="43" r="3" fill="#f9a03f" opacity="0.9"/>
+                <!-- Brush -->
+                <line x1="30" y1="20" x2="48" y2="145" stroke="#5a4a3a" stroke-width="3.5" stroke-linecap="round"/>
+                <ellipse cx="47" cy="143" rx="5" ry="10" fill="#c4632a" transform="rotate(5 47 143)"/>
+              </svg>
+            </div>
+            <div class="sub-card-label">Painting</div>
+          </div>
+
+          <div class="sub-card" onclick="openImageGallery('classes','coloring')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="160" fill="#fff8f0" rx="8"/>
+                <!-- Color pencils -->
+                <rect x="30" y="30" width="12" height="80" rx="4" fill="#e85d4a" transform="rotate(-12 36 70)"/>
+                <polygon points="24,108 30,120 36,108" fill="#c04030" transform="rotate(-12 30 114)"/>
+                <rect x="58" y="25" width="12" height="80" rx="4" fill="#f9a03f" transform="rotate(-4 64 65)"/>
+                <polygon points="52,103 58,115 64,103" fill="#d4802a" transform="rotate(-4 58 109)"/>
+                <rect x="86" y="28" width="12" height="80" rx="4" fill="#4ab875" transform="rotate(5 92 68)"/>
+                <polygon points="80,106 86,118 92,106" fill="#339955" transform="rotate(5 86 112)"/>
+                <rect x="114" y="30" width="12" height="80" rx="4" fill="#5b9bd4" transform="rotate(12 120 70)"/>
+                <polygon points="108,108 114,120 120,108" fill="#3a7ab0" transform="rotate(12 114 114)"/>
+                <rect x="142" y="32" width="12" height="80" rx="4" fill="#c4632a" transform="rotate(18 148 72)"/>
+                <polygon points="136,110 142,122 148,110" fill="#8b3a1a" transform="rotate(18 142 116)"/>
+                <!-- Color swatches -->
+                <rect x="35" y="128" width="18" height="14" rx="3" fill="#e85d4a"/>
+                <rect x="57" y="128" width="18" height="14" rx="3" fill="#f9a03f"/>
+                <rect x="79" y="128" width="18" height="14" rx="3" fill="#4ab875"/>
+                <rect x="101" y="128" width="18" height="14" rx="3" fill="#5b9bd4"/>
+                <rect x="123" y="128" width="18" height="14" rx="3" fill="#c4632a"/>
+              </svg>
+            </div>
+            <div class="sub-card-label">Coloring</div>
+          </div>
+
+          <div class="sub-card" onclick="openImageGallery('classes','sketching')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="160" fill="#f5f0e8" rx="8"/>
+                <!-- Sketch lines building a tree -->
+                <path d="M90,140 L90,90" stroke="#3d2a12" stroke-width="3" stroke-linecap="round"/>
+                <path d="M90,90 Q70,70 55,55" stroke="#3d2a12" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <path d="M90,90 Q110,68 125,52" stroke="#3d2a12" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <path d="M90,105 Q68,85 50,78" stroke="#3d2a12" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                <path d="M90,105 Q112,85 130,78" stroke="#3d2a12" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                <path d="M90,118 Q72,102 60,98" stroke="#3d2a12" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <path d="M90,118 Q108,102 120,98" stroke="#3d2a12" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <!-- hatching -->
+                <g opacity="0.2" transform="translate(28,30)">
+                  <line x1="0" y1="0" x2="22" y2="0" stroke="#5a4a3a" stroke-width="0.9"/>
+                  <line x1="2" y1="5" x2="20" y2="5" stroke="#5a4a3a" stroke-width="0.9"/>
+                  <line x1="4" y1="10" x2="18" y2="10" stroke="#5a4a3a" stroke-width="0.9"/>
+                  <line x1="6" y1="15" x2="16" y2="15" stroke="#5a4a3a" stroke-width="0.9"/>
+                  <line x1="8" y1="20" x2="14" y2="20" stroke="#5a4a3a" stroke-width="0.9"/>
+                </g>
+                <!-- Charcoal stick -->
+                <rect x="142" y="25" width="10" height="70" rx="3" fill="#3d2a12" transform="rotate(-8 147 60)"/>
+                <rect x="142" y="93" width="10" height="12" rx="2" fill="#1a1208" transform="rotate(-8 147 99)"/>
+              </svg>
+            </div>
+            <div class="sub-card-label">Sketching</div>
+          </div>
+
+          <div class="sub-card" onclick="openImageGallery('classes','watercolor')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="wc1b" cx="40%" cy="30%"><stop offset="0%" stop-color="#7ec8e3" stop-opacity="0.8"/><stop offset="100%" stop-color="#4a9aba" stop-opacity="0.2"/></radialGradient>
+                  <radialGradient id="wc2b" cx="60%" cy="70%"><stop offset="0%" stop-color="#f9a03f" stop-opacity="0.7"/><stop offset="100%" stop-color="#c4632a" stop-opacity="0.1"/></radialGradient>
+                  <radialGradient id="wc3b" cx="50%" cy="50%"><stop offset="0%" stop-color="#e8a0b4" stop-opacity="0.65"/><stop offset="100%" stop-color="#e8a0b4" stop-opacity="0"/></radialGradient>
+                </defs>
+                <rect width="180" height="160" fill="#f0f8ff" rx="8"/>
+                <!-- Watercolor blooms -->
+                <ellipse cx="72" cy="72" rx="55" ry="48" fill="url(#wc1b)"/>
+                <ellipse cx="108" cy="95" rx="50" ry="42" fill="url(#wc2b)"/>
+                <ellipse cx="65" cy="105" rx="38" ry="32" fill="url(#wc3b)"/>
+                <ellipse cx="120" cy="55" rx="30" ry="25" fill="#9bc5a0" opacity="0.35"/>
+                <!-- Water droplets -->
+                <ellipse cx="148" cy="130" rx="6" ry="8" fill="#7ec8e3" opacity="0.5"/>
+                <ellipse cx="160" cy="120" rx="4" ry="6" fill="#7ec8e3" opacity="0.4"/>
+                <ellipse cx="155" cy="138" rx="3" ry="5" fill="#4a9aba" opacity="0.35"/>
+                <!-- Brush -->
+                <line x1="155" y1="15" x2="140" y2="155" stroke="#5a4a3a" stroke-width="3" stroke-linecap="round"/>
+                <ellipse cx="141" cy="153" rx="4" ry="9" fill="#7ec8e3" transform="rotate(5 141 153)"/>
+              </svg>
+            </div>
+            <div class="sub-card-label">Watercolor</div>
+          </div>
+
+          <div class="sub-card" onclick="openImageGallery('classes','canvas')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="160" fill="#fdf6ec" rx="8"/>
+                <!-- Canvas frame -->
+                <rect x="28" y="18" width="124" height="110" rx="3" fill="white" stroke="#c4a882" stroke-width="2.5"/>
+                <!-- Canvas texture lines -->
+                <line x1="28" y1="45" x2="152" y2="45" stroke="#e8d8c0" stroke-width="0.7"/>
+                <line x1="28" y1="72" x2="152" y2="72" stroke="#e8d8c0" stroke-width="0.7"/>
+                <line x1="28" y1="99" x2="152" y2="99" stroke="#e8d8c0" stroke-width="0.7"/>
+                <line x1="62" y1="18" x2="62" y2="128" stroke="#e8d8c0" stroke-width="0.7"/>
+                <line x1="96" y1="18" x2="96" y2="128" stroke="#e8d8c0" stroke-width="0.7"/>
+                <line x1="130" y1="18" x2="130" y2="128" stroke="#e8d8c0" stroke-width="0.7"/>
+                <!-- Abstract art on canvas -->
+                <path d="M45,100 Q65,50 90,70 Q115,90 135,40" stroke="#c4632a" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <circle cx="75" cy="65" r="20" fill="#7ec8e3" opacity="0.5"/>
+                <circle cx="110" cy="85" r="16" fill="#f9a03f" opacity="0.5"/>
+                <ellipse cx="55" cy="90" rx="14" ry="10" fill="#9bc5a0" opacity="0.5"/>
+                <!-- Canvas sides (depth) -->
+                <rect x="28" y="128" width="124" height="8" rx="1" fill="#d4b896"/>
+                <!-- Tube of paint -->
+                <rect x="30" y="136" width="40" height="14" rx="6" fill="#c4632a"/>
+                <rect x="65" y="138" width="10" height="10" rx="2" fill="#8b3a1a"/>
+                <rect x="72" y="140" width="8" height="6" rx="1" fill="#f7f2e8"/>
+              </svg>
+            </div>
+            <div class="sub-card-label">Canvas Art</div>
+          </div>
+
+        </div><!-- /sub-scroll -->
+      </div><!-- /sub-scroll-wrap -->
+    </div><!-- /panel-classes -->
+
+    <!-- ═══ COURSES SUB-CATEGORIES ═══ -->
+    <div class="sub-panel" id="panel-courses">
+      <div class="sub-panel-header">
+        <span class="sub-panel-eyebrow">📜 Courses</span>
+        <h3 class="sub-panel-title">Pick a <em>course</em></h3>
+        <button class="sub-panel-close" onclick="toggleMain('courses')">✕ Close</button>
+      </div>
+      <div class="sub-scroll-wrap">
+        <div class="sub-scroll" id="scroll-courses">
+
+          <div class="sub-card" onclick="openImageGallery('courses','calligraphy')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="160" fill="#fdf8f0" rx="8"/>
+                <!-- Calligraphy letters -->
+                <text x="90" y="85" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="52" fill="#3d2a12" opacity="0.15">A</text>
+                <!-- Pen nib -->
+                <g transform="translate(90,80) rotate(-40)">
+                  <rect x="-4" y="-55" width="8" height="65" rx="2" fill="#3d2a12"/>
+                  <polygon points="0,12 -7,0 7,0" fill="#c4a882"/>
+                  <line x1="-3" y1="0" x2="3" y2="0" stroke="#1a1208" stroke-width="0.8"/>
+                </g>
+                <!-- Ink drop / swash -->
+                <path d="M42,120 Q65,90 90,105 Q115,120 138,95" stroke="#3d2a12" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+                <path d="M50,132 Q75,112 100,125" stroke="#3d2a12" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+                <!-- Ink bottle -->
+                <rect x="140" y="110" width="24" height="32" rx="3" fill="#1a1208"/>
+                <rect x="147" y="104" width="10" height="10" rx="2" fill="#3d2a12"/>
+                <rect x="140" y="115" width="24" height="8" fill="#d4a84b" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="sub-card-label">Calligraphy</div>
+          </div>
+
+          <div class="sub-card" onclick="openImageGallery('courses','rangoli')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="160" fill="#fff8f0" rx="8"/>
+                <!-- Rangoli geometric pattern -->
+                <g transform="translate(90,80)">
+                  <circle r="6" fill="#c4632a"/>
+                  <circle r="18" fill="none" stroke="#d4a84b" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <circle r="32" fill="none" stroke="#c4632a" stroke-width="1.5"/>
+                  <circle r="48" fill="none" stroke="#d4a84b" stroke-width="1" stroke-dasharray="5 3"/>
+                  <circle r="62" fill="none" stroke="#9bc5a0" stroke-width="1.2"/>
+                  <!-- Petals -->
+                  <ellipse cx="0" cy="-32" rx="7" ry="14" fill="#e85d4a" opacity="0.7"/>
+                  <ellipse cx="0" cy="-32" rx="7" ry="14" fill="#f9a03f" opacity="0.7" transform="rotate(60)"/>
+                  <ellipse cx="0" cy="-32" rx="7" ry="14" fill="#4ab875" opacity="0.7" transform="rotate(120)"/>
+                  <ellipse cx="0" cy="-32" rx="7" ry="14" fill="#5b9bd4" opacity="0.7" transform="rotate(180)"/>
+                  <ellipse cx="0" cy="-32" rx="7" ry="14" fill="#c4632a" opacity="0.7" transform="rotate(240)"/>
+                  <ellipse cx="0" cy="-32" rx="7" ry="14" fill="#d4a84b" opacity="0.7" transform="rotate(300)"/>
+                  <!-- Dots -->
+                  <circle cx="0" cy="-62" r="4" fill="#c4632a" opacity="0.8"/>
+                  <circle cx="0" cy="-62" r="4" fill="#d4a84b" opacity="0.8" transform="rotate(60)"/>
+                  <circle cx="0" cy="-62" r="4" fill="#4ab875" opacity="0.8" transform="rotate(120)"/>
+                  <circle cx="0" cy="-62" r="4" fill="#5b9bd4" opacity="0.8" transform="rotate(180)"/>
+                  <circle cx="0" cy="-62" r="4" fill="#e85d4a" opacity="0.8" transform="rotate(240)"/>
+                  <circle cx="0" cy="-62" r="4" fill="#9bc5a0" opacity="0.8" transform="rotate(300)"/>
+                </g>
+              </svg>
+            </div>
+            <div class="sub-card-label">Rangoli</div>
+          </div>
+
+          <div class="sub-card" onclick="openImageGallery('courses','handwriting')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="160" fill="#f5f8ff" rx="8"/>
+                <!-- Lined paper -->
+                <line x1="22" y1="45" x2="158" y2="45" stroke="#c8d8f0" stroke-width="1"/>
+                <line x1="22" y1="62" x2="158" y2="62" stroke="#c8d8f0" stroke-width="1"/>
+                <line x1="22" y1="79" x2="158" y2="79" stroke="#c8d8f0" stroke-width="1"/>
+                <line x1="22" y1="96" x2="158" y2="96" stroke="#c8d8f0" stroke-width="1"/>
+                <line x1="22" y1="113" x2="158" y2="113" stroke="#c8d8f0" stroke-width="1"/>
+                <line x1="22" y1="130" x2="158" y2="130" stroke="#c8d8f0" stroke-width="1"/>
+                <!-- Left margin -->
+                <line x1="38" y1="20" x2="38" y2="150" stroke="#e8a0b4" stroke-width="1.2"/>
+                <!-- Handwriting -->
+                <path d="M48,44 Q58,38 65,44 Q72,50 68,44" stroke="#3d2a12" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <path d="M75,44 L75,56" stroke="#3d2a12" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <path d="M82,40 Q92,34 98,44 Q102,52 95,55" stroke="#3d2a12" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <path d="M48,61 Q62,54 72,62 Q80,68 75,75 Q68,82 55,76 Q44,70 48,61" stroke="#3d2a12" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <path d="M48,95 Q70,88 90,96 Q108,104 120,95" stroke="#3d2a12" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                <path d="M48,112 Q75,105 100,113 Q125,121 145,112" stroke="#3d2a12" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+                <!-- Pen -->
+                <line x1="148" y1="22" x2="128" y2="145" stroke="#3d2a12" stroke-width="4" stroke-linecap="round"/>
+                <polygon points="128,145 123,155 133,151" fill="#c4a882"/>
+                <rect x="144" y="18" width="9" height="12" rx="1" fill="#d4a84b" transform="rotate(-8 144 18)"/>
+              </svg>
+            </div>
+            <div class="sub-card-label">Handwriting</div>
+          </div>
+
+          <div class="sub-card" onclick="openImageGallery('courses','mandala')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="160" fill="#1a0a2e" rx="8"/>
+                <g transform="translate(90,80)">
+                  <circle r="5" fill="#d4a84b"/>
+                  <circle r="16" fill="none" stroke="#d4a84b" stroke-width="1" stroke-dasharray="3 3"/>
+                  <circle r="30" fill="none" stroke="#c4632a" stroke-width="1.5"/>
+                  <circle r="44" fill="none" stroke="#d4a84b" stroke-width="1" stroke-dasharray="5 3"/>
+                  <circle r="58" fill="none" stroke="#7a8c6e" stroke-width="1.2"/>
+                  <ellipse cx="0" cy="-30" rx="6" ry="14" fill="#c4632a" opacity="0.8"/>
+                  <ellipse cx="0" cy="-30" rx="6" ry="14" fill="#c4632a" opacity="0.8" transform="rotate(45)"/>
+                  <ellipse cx="0" cy="-30" rx="6" ry="14" fill="#c4632a" opacity="0.8" transform="rotate(90)"/>
+                  <ellipse cx="0" cy="-30" rx="6" ry="14" fill="#c4632a" opacity="0.8" transform="rotate(135)"/>
+                  <ellipse cx="0" cy="-30" rx="6" ry="14" fill="#c4632a" opacity="0.8" transform="rotate(180)"/>
+                  <ellipse cx="0" cy="-30" rx="6" ry="14" fill="#c4632a" opacity="0.8" transform="rotate(225)"/>
+                  <ellipse cx="0" cy="-30" rx="6" ry="14" fill="#c4632a" opacity="0.8" transform="rotate(270)"/>
+                  <ellipse cx="0" cy="-30" rx="6" ry="14" fill="#c4632a" opacity="0.8" transform="rotate(315)"/>
+                  <ellipse cx="0" cy="-44" rx="4" ry="10" fill="#d4a84b" opacity="0.7"/>
+                  <ellipse cx="0" cy="-44" rx="4" ry="10" fill="#d4a84b" opacity="0.7" transform="rotate(60)"/>
+                  <ellipse cx="0" cy="-44" rx="4" ry="10" fill="#d4a84b" opacity="0.7" transform="rotate(120)"/>
+                  <ellipse cx="0" cy="-44" rx="4" ry="10" fill="#d4a84b" opacity="0.7" transform="rotate(180)"/>
+                  <ellipse cx="0" cy="-44" rx="4" ry="10" fill="#d4a84b" opacity="0.7" transform="rotate(240)"/>
+                  <ellipse cx="0" cy="-44" rx="4" ry="10" fill="#d4a84b" opacity="0.7" transform="rotate(300)"/>
+                </g>
+              </svg>
+            </div>
+            <div class="sub-card-label">Mandala Art</div>
+          </div>
+
+          <div class="sub-card" onclick="openImageGallery('courses','craft')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="160" fill="#fff5ee" rx="8"/>
+                <!-- Scissors -->
+                <g transform="translate(48,50) rotate(30)">
+                  <circle cx="0" cy="0" r="10" fill="none" stroke="#5a4a3a" stroke-width="2.5"/>
+                  <circle cx="28" cy="0" r="10" fill="none" stroke="#5a4a3a" stroke-width="2.5"/>
+                  <line x1="8" y1="5" x2="60" y2="45" stroke="#5a4a3a" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="20" y1="5" x2="60" y2="38" stroke="#5a4a3a" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+                <!-- Paper strips -->
+                <rect x="85" y="30" width="70" height="14" rx="4" fill="#e85d4a" opacity="0.7" transform="rotate(-8 120 37)"/>
+                <rect x="88" y="52" width="65" height="14" rx="4" fill="#f9a03f" opacity="0.7" transform="rotate(5 120 59)"/>
+                <rect x="82" y="74" width="72" height="14" rx="4" fill="#4ab875" opacity="0.7" transform="rotate(-3 118 81)"/>
+                <rect x="90" y="96" width="60" height="14" rx="4" fill="#5b9bd4" opacity="0.7" transform="rotate(7 120 103)"/>
+                <!-- Glue stick -->
+                <rect x="28" y="105" width="22" height="40" rx="8" fill="#f9a03f"/>
+                <rect x="28" y="115" width="22" height="10" fill="#d4802a" opacity="0.5"/>
+                <rect x="33" y="100" width="12" height="10" rx="3" fill="#e8e0d0"/>
+              </svg>
+            </div>
+            <div class="sub-card-label">Craft Art</div>
+          </div>
+
+          <div class="sub-card" onclick="openImageGallery('courses','pencilshading')">
+            <div class="sub-card-art">
+              <svg viewBox="0 0 180 160" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="160" fill="#f5f0e8" rx="8"/>
+                <!-- Gradient shading sphere -->
+                <defs>
+                  <radialGradient id="sphere" cx="35%" cy="35%">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="40%" stop-color="#b5a896"/>
+                    <stop offset="100%" stop-color="#3d2a12"/>
+                  </radialGradient>
+                </defs>
+                <circle cx="90" cy="82" r="52" fill="url(#sphere)"/>
+                <!-- Hatching lines for shading effect -->
+                <g clip-path="url(#sphereClip)" opacity="0.15">
+                  <line x1="50" y1="115" x2="115" y2="50" stroke="#3d2a12" stroke-width="1"/>
+                  <line x1="58" y1="123" x2="123" y2="58" stroke="#3d2a12" stroke-width="1"/>
+                  <line x1="66" y1="130" x2="130" y2="66" stroke="#3d2a12" stroke-width="1"/>
+                  <line x1="42" y1="107" x2="107" y2="42" stroke="#3d2a12" stroke-width="1"/>
+                </g>
+                <!-- Pencils beside sphere -->
+                <line x1="152" y1="22" x2="140" y2="145" stroke="#5a4a3a" stroke-width="4.5" stroke-linecap="round"/>
+                <polygon points="140,145 135,155 145,152" fill="#d4a84b"/>
+                <rect x="149" y="18" width="9" height="11" rx="1" fill="#f9e0b0" transform="rotate(-5 149 18)"/>
+                <line x1="30" y1="20" x2="22" y2="145" stroke="#5a4a3a" stroke-width="3.5" stroke-linecap="round"/>
+                <polygon points="22,145 17,155 27,152" fill="#c4632a"/>
+                <!-- Shading swatches -->
+                <rect x="18" y="148" width="12" height="8" rx="1" fill="#f5f0e8"/>
+                <rect x="33" y="148" width="12" height="8" rx="1" fill="#c8beb0"/>
+                <rect x="48" y="148" width="12" height="8" rx="1" fill="#8a7a6a"/>
+                <rect x="63" y="148" width="12" height="8" rx="1" fill="#4a3a2a"/>
+              </svg>
+            </div>
+            <div class="sub-card-label">Pencil Shading</div>
+          </div>
+
+        </div><!-- /sub-scroll -->
+      </div><!-- /sub-scroll-wrap -->
+    </div><!-- /panel-courses -->
+
+    <!-- ═══ IMAGE GALLERY (inline, expands below) ═══ -->
+    <div class="image-gallery-section" id="image-gallery-section">
+      <div class="ig-header">
+        <div>
+          <span class="ig-breadcrumb" id="ig-breadcrumb"></span>
+          <h3 class="ig-title" id="ig-title"></h3>
+        </div>
+        <div class="ig-header-actions">
+          <!-- Admin only: Add Pictures -->
+          <button class="ig-upload-btn" onclick="triggerImgUpload()" id="ig-upload-btn">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+              <path d="M10 3a1 1 0 01.707.293l4 4a1 1 0 01-1.414 1.414L11 6.414V13a1 1 0 11-2 0V6.414L6.707 8.707A1 1 0 015.293 7.293l4-4A1 1 0 0110 3z"/>
+              <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+            </svg>
+            Add Pictures
+          </button>
+          <button class="ig-close-btn" onclick="closeImageGallery()">✕ Close</button>
+        </div>
+      </div>
+
+      <div class="ig-progress" id="ig-progress">
+        <div class="ig-spinner"></div>
+        <span>Uploading…</span>
+      </div>
+
+      <div class="ig-empty" id="ig-empty">
+        <div class="ig-empty-icon">🖼️</div>
+        <p>No artworks yet in this category.</p>
+      </div>
+
+      <div class="ig-grid" id="ig-grid"></div>
+
+      <input type="file" id="ig-file-input" accept="image/*" multiple onchange="handleImgFiles(this.files)" style="display:none">
+    </div>
+
+  </div><!-- /medium-section -->
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-deco">Art</div>
+  <div class="about-inner">
+    <div class="about-image-stack">
+      <svg class="about-img-main" viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="520" fill="#3d2a12"/>
+        <rect x="30" y="30" width="340" height="460" fill="#2c1f0e" rx="2"/>
+        <rect x="160" y="150" width="5" height="200" fill="#7a5c3a"/>
+        <rect x="120" y="200" width="80" height="60" fill="none" stroke="#d4a84b" stroke-width="2"/>
+        <rect x="125" y="205" width="70" height="50" fill="#c4e0f0" rx="1"/>
+        <path d="M130,220 Q140,215 150,225 Q160,215 170,225" stroke="#7ec8e3" stroke-width="2" fill="none"/>
+        <circle cx="145" cy="240" r="10" fill="#d4a84b" opacity="0.7"/>
+        <circle cx="200" cy="260" r="18" fill="#c4a882"/>
+        <rect x="185" y="278" width="30" height="50" rx="5" fill="#c4632a"/>
+        <line x1="185" y1="295" x2="160" y2="310" stroke="#c4a882" stroke-width="8" stroke-linecap="round"/>
+        <line x1="215" y1="295" x2="235" y2="280" stroke="#c4a882" stroke-width="8" stroke-linecap="round"/>
+        <ellipse cx="230" cy="280" rx="18" ry="14" fill="#b5a896"/>
+        <circle cx="225" cy="275" r="4" fill="#c4632a"/>
+        <circle cx="235" cy="275" r="4" fill="#7b2ff7"/>
+        <circle cx="232" cy="285" r="4" fill="#7ec8e3"/>
+        <text x="200" y="430" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="16" fill="rgba(212,168,75,0.6)">Rashi Art Classes</text>
+        <text x="200" y="455" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="rgba(181,168,150,0.5)">Where art breathes</text>
+      </svg>
+      <svg class="about-img-accent" viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg">
+        <rect width="260" height="300" fill="#c4632a"/>
+        <rect x="30" y="60" width="80" height="20" rx="10" fill="#e8a070" transform="rotate(-20 70 70)"/>
+        <rect x="80" y="100" width="80" height="18" rx="9" fill="#7a8c6e" transform="rotate(10 120 109)"/>
+        <rect x="140" y="70" width="70" height="18" rx="9" fill="#d4a84b" transform="rotate(-5 175 79)"/>
+        <line x1="50" y1="160" x2="200" y2="130" stroke="#2c1f0e" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="197" cy="130" rx="5" ry="12" fill="#7a5c3a" transform="rotate(-10 197 130)"/>
+        <line x1="60" y1="200" x2="180" y2="170" stroke="#2c1f0e" stroke-width="4" stroke-linecap="round"/>
+        <text x="130" y="250" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="13" fill="rgba(247,242,232,0.8)">"Create freely."</text>
+      </svg>
+      <div class="about-badge"><strong>20+</strong><span>Years of<br>Teaching</span></div>
+    </div>
+    <div class="about-text">
+      <p class="section-eyebrow">✦ &nbsp;Our story</p>
+      <h2 class="section-title">More than a<br>class — it's a <em>community</em></h2>
+      <div class="section-divider"></div>
+      <p class="about-body">Rashi Art Classes was born from a simple belief: <strong style="color:var(--gold)">everyone carries an artist within.</strong> With over 20 years of teaching experience, our studio has grown into a warm, welcoming space where beginners and seasoned artists come together to learn, create, and inspire one another.</p>
+      <div class="about-stats">
+        <div class="stat-item"><span class="stat-num">50+</span><span class="stat-label">Students</span></div>
+        <div class="stat-item"><span class="stat-num">11</span><span class="stat-label">Categories</span></div>
+        <div class="stat-item"><span class="stat-num">20+</span><span class="stat-label">Years Exp.</span></div>
+      </div>
+      <div class="about-features">
+        <div class="feat-item"><div class="feat-icon">🎨</div><div class="feat-text"><strong style="color:var(--cream)">All skill levels welcome</strong> — from complete beginners to advanced artists.</div></div>
+        <div class="feat-item"><div class="feat-icon">🖼️</div><div class="feat-text"><strong style="color:var(--cream)">Professional materials</strong> — fully stocked studio, nothing to bring.</div></div>
+        <div class="feat-item"><div class="feat-icon">🤝</div><div class="feat-text"><strong style="color:var(--cream)">Small batch groups</strong> — personalised attention guaranteed.</div></div>
+        <div class="feat-item"><div class="feat-icon">📅</div><div class="feat-text"><strong style="color:var(--cream)">Weekend sessions</strong> — Saturday 3–4 pm &amp; Sunday 10 am–5 pm.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <p class="section-eyebrow">✦ &nbsp;Get in touch</p>
+    <h2 class="section-title">Let's create <em>together</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="contact-detail">
+        <div class="contact-item"><div class="contact-item-icon">📍</div><div class="contact-item-text"><strong>Address</strong><span>Rashi Art Classes, Goregoan West, Mumbai — 400104</span></div></div>
+        <div class="contact-item"><div class="contact-item-icon">📞</div><div class="contact-item-text"><strong>Phone / WhatsApp</strong><span>+91 90227 81500</span></div></div>
+        <div class="contact-item"><div class="contact-item-icon">✉️</div><div class="contact-item-text"><strong>Email</strong><span>pritisaliya1975@gmail.com</span></div></div>
+        <div class="contact-item"><div class="contact-item-icon">🕐</div><div class="contact-item-text"><strong>Class Hours</strong><span>Saturday 3 pm – 4 pm &nbsp;|&nbsp; Sunday 10 am – 5 pm</span></div></div>
+      </div>
+      <div class="contact-map-placeholder"><div class="map-pattern"></div><span style="position:relative;z-index:1;">📍 Find us on Google Maps</span></div>
+    </div>
+    <div>
+      <form class="contact-form" id="contact-form">
+        <div><label for="cf-name">Your Name</label><input type="text" id="cf-name" placeholder="e.g. Priya Sharma" required></div>
+        <div><label for="cf-email">Email Address</label><input type="email" id="cf-email" placeholder="priya@email.com"></div>
+        <div><label for="cf-interest">I'm interested in</label>
+          <select id="cf-interest">
+            <option value="">Select a class…</option>
+            <option>Drawing</option><option>Painting</option><option>Coloring</option>
+            <option>Sketching</option><option>Watercolor</option><option>Canvas Art</option>
+            <option>Calligraphy</option><option>Rangoli</option><option>Handwriting</option>
+            <option>Mandala Art</option><option>Craft Art</option><option>Pencil Shading</option>
+          </select>
+        </div>
+        <div><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="Tell us about your experience level, preferred timing, or any questions…"></textarea></div>
+        <button type="submit" class="submit-btn">📲 &nbsp;Send via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span onclick="footerSecretClick()" style="cursor:default;user-select:none;">© 2026 Rashi Art Classes. All rights reserved.</span>
+  <span>Made with ♥ &amp; paint</span>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="wa-float">
+  <div class="wa-pulse"></div>
+  <a class="wa-btn" href="https://wa.me/919022781500?text=Hi%20Rashi%20Art%20Classes!%20I%27d%20like%20to%20know%20more%20about%20your%20classes.%20%F0%9F%8E%A8" target="_blank" rel="noopener">
+    <svg class="wa-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="16" cy="16" r="16" fill="#25D366"/>
+      <path d="M23.5 8.5C21.7 6.7 19.3 5.7 16.8 5.7C11.5 5.7 7.2 10 7.2 15.3C7.2 17 7.7 18.7 8.5 20.1L7.2 25L12.3 23.7C13.6 24.5 15.2 24.9 16.8 24.9C22.1 24.9 26.4 20.6 26.4 15.3C26.3 12.8 25.3 10.3 23.5 8.5ZM16.8 23.2C15.4 23.2 14 22.8 12.8 22.1L12.5 21.9L9.5 22.7L10.3 19.8L10.1 19.5C9.3 18.3 8.9 16.8 8.9 15.3C8.9 11 12.5 7.4 16.9 7.4C19 7.4 21 8.2 22.5 9.7C24 11.2 24.8 13.2 24.8 15.3C24.6 19.6 21.1 23.2 16.8 23.2ZM21.1 17.3C20.9 17.2 19.7 16.6 19.5 16.5C19.3 16.4 19.2 16.4 19 16.6C18.9 16.8 18.4 17.3 18.2 17.5C18.1 17.7 17.9 17.7 17.7 17.6C16.4 17 15.3 16.1 14.4 15C14.2 14.8 14.3 14.6 14.5 14.4C14.6 14.3 14.8 14.1 14.9 14C15.1 13.7 15.1 13.5 15.1 13.2C15 13.1 14.4 11.9 14.2 11.4C14 11 13.8 11 13.6 11C13.3 11 12.8 11.1 12.6 11.3C12.4 11.5 11.8 12.1 11.8 13.3C11.8 14.5 12.6 15.7 12.7 15.9C12.8 16.1 14.4 18.5 16.8 19.5C19.2 20.5 19.2 20.2 19.6 20.1C20 20 21.1 19.5 21.3 18.9C21.5 18.3 21.5 17.8 21.4 17.7C21.3 17.5 21.2 17.4 21.1 17.3Z" fill="white"/>
+    </svg>
+    Chat on WhatsApp
+  </a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1)">‹</button>
+  <div class="lb-img-wrap"><img id="lb-img" src="" alt=""></div>
+  <button class="lb-nav lb-next" onclick="lbNav(1)">›</button>
+  <div class="lb-footer"><span id="lb-label"></span><span id="lb-counter"></span></div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-panel" id="admin-panel">
+  <h4>🔐 Owner Login</h4>
+  <p>Enter your password to manage gallery images.</p>
+  <input type="password" id="admin-pwd-input" placeholder="Password…">
+  <div class="admin-error" id="admin-error"></div>
+  <div class="admin-panel-btns">
+    <button class="admin-login-btn" onclick="tryLogin()">Login</button>
+    <button class="admin-cancel-btn" onclick="closeAdminPanel()">Cancel</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
