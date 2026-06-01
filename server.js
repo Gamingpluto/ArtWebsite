@@ -14,7 +14,7 @@ const app  = express();
 const PORT = process.env.PORT || 3000;
 
 // ─── ADMIN PASSWORD (set ADMIN_PASSWORD as env var on Render — never hardcode) ───
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'rashi2025';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || ;
 
 // Simple in-memory token store  { token: expiresAt }
 const validTokens = new Map();
@@ -50,7 +50,7 @@ cloudinary.config({
 // ─── MIDDLEWARE ───
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 // Multer: accept images up to 10MB, store in memory
 const upload = multer({
@@ -224,7 +224,7 @@ app.delete('/api/images/:public_id(*)', requireAdmin, async (req, res) => {
 
 // ─── SERVE FRONTEND ───
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+ res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // ─── START ───
