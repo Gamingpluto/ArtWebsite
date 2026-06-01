@@ -14,7 +14,7 @@ const app  = express();
 const PORT = process.env.PORT || 3000;
 
 // ─── ADMIN PASSWORD (set ADMIN_PASSWORD as env var on Render — never hardcode) ───
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || ;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 // Simple in-memory token store  { token: expiresAt }
 const validTokens = new Map();
