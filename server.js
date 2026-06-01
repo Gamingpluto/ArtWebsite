@@ -22,7 +22,7 @@ cloudinary.config({
 // ─── MIDDLEWARE ───
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 // Multer: accept images up to 10MB, store in memory
 const upload = multer({
